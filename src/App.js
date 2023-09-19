@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="App">
         <MainMenu></MainMenu>
-        <PanelCalculator></PanelCalculator>
     </div>
   );
 }

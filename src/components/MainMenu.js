@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter, Link} from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 import { useState } from 'react';
+import PanelCalculator from './PanelCalculator';
+import Form from './Form';
 
 function MainMenu() {
     let currentUrl = window.location.pathname;
@@ -32,6 +34,14 @@ function MainMenu() {
                     </ul>
                 </header>
             </div>
+            <Routes>
+                <Route path='/' Component={PanelCalculator}>
+                </Route>
+                <Route path='/calculator' Component={PanelCalculator}>
+                </Route>
+                <Route path='/form' Component={Form}>
+                </Route>
+            </Routes>
         </BrowserRouter>
     );
 }
