@@ -3,6 +3,7 @@ import { BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 import { useState } from 'react';
 import PanelCalculator from './PanelCalculator';
 import Form from './Form';
+import ViewList from './ViewList';
 
 function MainMenu() {
     let currentUrl = window.location.pathname;
@@ -10,7 +11,7 @@ function MainMenu() {
     const itemsMenu = [
             {id: 1, name: "Calculadora", url: "/calculator", className: currentUrl === "/calculator" ? "nav-link active": "nav-link"},
             {id: 2, name: "Formulario", url: "/form", className: currentUrl === "/form" ? "nav-link active": "nav-link"},
-            {id: 3, name: "Tabla de registro", url: "/viewregister", className: currentUrl === "/viewregister" ? "nav-link active": "nav-link"},
+            {id: 3, name: "Tabla de registro", url: "/viewlist", className: currentUrl === "/viewlist" ? "nav-link active": "nav-link"},
             {id: 4, name: "Tabla con submenus", url: "/viewsubmenu", className: currentUrl === "/viewsubmenu" ? "nav-link active": "nav-link"}
         ];
     const [items, setItems] = useState(itemsMenu);
@@ -40,6 +41,8 @@ function MainMenu() {
                 <Route path='/calculator' Component={PanelCalculator}>
                 </Route>
                 <Route path='/form' Component={Form}>
+                </Route>
+                <Route path='/viewlist' Component={ViewList}>
                 </Route>
             </Routes>
         </BrowserRouter>
