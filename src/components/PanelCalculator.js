@@ -45,14 +45,14 @@ function PanelCalculator() {
         </div>
       </div>
       <div className="mb-3 row">
-      <label className="col-sm-2 col-form-label">Operacion</label>
-      <div className="col-sm-10">
-        <select class="form-select form-select-sm" aria-label="Small select example" value = {operator} onChange={ (e) => (setOperator(e.target.value))} >
-          <option value="1" selected>Suma</option>
-          <option value="2">Resta</option>
-          <option value="3">Multiplicacion</option>
-          <option value="4">Division</option>
-        </select>
+        <label className="col-sm-2 col-form-label">Operacion</label>
+        <div className="col-sm-10">
+          <select class="form-select form-select-sm" aria-label="Small select example" value = {operator} onChange={ (e) => (setOperator(e.target.value))} >
+            <option value="1" selected>Suma</option>
+            <option value="2">Resta</option>
+            <option value="3">Multiplicacion</option>
+            <option value="4">Division</option>
+          </select>
         </div>
       </div>
       <div className="mb-3 row">
