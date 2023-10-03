@@ -4,6 +4,7 @@ import { useState } from 'react';
 import PanelCalculator from './PanelCalculator';
 import Form from './Form';
 import ViewList from './ViewList';
+import ConfirmationModal from './ConfirmationModal';
 
 function MainMenu() {
     let currentUrl = window.location.pathname;
@@ -43,6 +44,8 @@ function MainMenu() {
                 <Route path='/form' Component={Form}>
                 </Route>
                 <Route path='/viewlist' Component={ViewList}>
+                </Route>
+                <Route path='/viewsubmenu' Component={ConfirmationModal}>
                 </Route>
             </Routes>
         </BrowserRouter>
