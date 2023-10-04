@@ -8,7 +8,7 @@ import ConfirmationModal from './ConfirmationModal';
 
 function MainMenu() {
     let currentUrl = window.location.pathname;
-    currentUrl === "/TestingPage" ? currentUrl = '/calculator': currentUrl = currentUrl;
+    currentUrl === "/TestingPage/" ? currentUrl = '/TestingPage/calculator': currentUrl = currentUrl;
     const itemsMenu = [
             {id: 1, name: "Calculadora", url: "/calculator", className: currentUrl === "/TestingPage/calculator" ? "nav-link active": "nav-link"},
             {id: 2, name: "Formulario", url: "/form", className: currentUrl === "/TestingPage/form" ? "nav-link active": "nav-link"},
